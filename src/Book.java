@@ -23,7 +23,19 @@ public class Book {
     public String toString(){
         return "Names:\n"+this.paragraphs+"\nImages:\n"+this.images+"\nTables\n"+this.tables;
     }
+    public void printeach(ArrayList list){
+        for(Object i : list){
+            System.out.println(i);
+        }
+    }
     public void print(){
-        System.out.println(this.toString());
+        System.out.println("[---Name---]");
+        System.out.println(this.name);
+        System.out.println("[---Paragraphs---]");
+        printeach(paragraphs);
+        System.out.println("[---Images---]");
+        printeach(images);
+        System.out.println("[---Tables---]");
+        printeach(tables);
     }
 }

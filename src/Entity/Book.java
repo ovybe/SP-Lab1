@@ -1,9 +1,11 @@
+package Entity;
+
+import Entity.Author;
+
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class Book {
-    // responsible for Chapter
+    // responsible for Entity.Chapter
     private String title;
     private ArrayList<Chapter> chapters;
     private ArrayList<Author> authors;
@@ -31,10 +33,10 @@ public class Book {
     public void print(){
         System.out.println("Title: "+this.title);
         for(Object i : this.authors){
-            System.out.println("Author: "+i);
+            System.out.println("Entity.Author: "+i);
         }
         for(Object i : this.chapters){
-            System.out.println("Chapter: "+i);
+            System.out.println("Entity.Chapter: "+i);
         }
     }
     // HW ADD INTERFACE, EX 10

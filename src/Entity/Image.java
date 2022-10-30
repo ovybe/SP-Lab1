@@ -1,4 +1,8 @@
-public class Image {
+package Entity;
+
+import Interface.Element;
+
+public class Image implements Element {
     private String imageName;
     public Image(String name){
         this.imageName=name;

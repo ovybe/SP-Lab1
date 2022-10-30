@@ -1,3 +1,8 @@
+import Entity.Author;
+import Entity.Book;
+import Entity.Chapter;
+import Entity.SubChapter;
+
 public class Main {
     public static void main(String[] args) {
         Book discoTitanic = new Book("Disco Titanic");

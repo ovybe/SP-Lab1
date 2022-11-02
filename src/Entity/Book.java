@@ -1,43 +1,34 @@
 package Entity;
 
 import Entity.Author;
+import Interface.Element;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Book {
+public class Book extends Section{
     // responsible for Entity.Chapter
-    private String title;
-    private ArrayList<Chapter> chapters;
     private ArrayList<Author> authors;
     public Book(String title){
-        this.title=title;
-        this.chapters= new ArrayList<>();
+        super(title);
         this.authors= new ArrayList<>();
     }
     public void addAuthor(Author author){
         this.authors.add(author);
     }
-    public int createChapter(String name){
-        Chapter chapter = new Chapter(name);
-        this.chapters.add(chapter);
-        return this.chapters.indexOf(chapter);
+    public void addContent(Element el){
+        super.add(el);
     }
-    public Chapter getChapter(int index){
-        return this.chapters.get(index);
-    }
-//    public void printeach(List list){
-//        for(Object i : list){
-//            System.out.println(i);
-//        }
-//    }
     public void print(){
-        System.out.println("Title: "+this.title);
-        for(Object i : this.authors){
-            System.out.println("Entity.Author: "+i);
+        System.out.println("Book: "+this.title);
+        System.out.println();
+        System.out.println("Authors:");
+        for(Author author : this.authors){
+            author.print();
         }
-        for(Object i : this.chapters){
-            System.out.println("Entity.Chapter: "+i);
-        }
+        System.out.println();
+        super.print(false);
+
+
     }
-    // HW ADD INTERFACE, EX 10
 }

@@ -10,4 +10,16 @@ public class Table implements Element {
     public void print(){
         System.out.println("Table with title: "+this.title);
     }
+
+    public void add(Element el) {
+
+    }
+
+    public void remove(Element el) {
+
+    }
+
+    public Element get(int index) {
+        return null;
+    }
 }

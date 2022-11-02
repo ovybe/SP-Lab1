@@ -2,13 +2,12 @@ package Entity;
 
 import Interface.Element;
 
-public class Paragraph implements Element {
-    private String text;
-    public Paragraph(String text){
-        this.text=text;
+public class TableOfContents implements Element {
+    public TableOfContents(){
+
     }
-    public void print(){
-        System.out.println("Paragraph: "+this.text);
+    public void print() {
+        System.out.println("Table of Contents");
     }
 
     public void add(Element el) {
@@ -22,5 +21,4 @@ public class Paragraph implements Element {
     public Element get(int index) {
         return null;
     }
-
 }

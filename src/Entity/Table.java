@@ -3,7 +3,7 @@ package Entity;
 import Interface.Element;
 
 public class Table implements Element {
-    private String title;
+    private final String title;
     public Table(String title){
         this.title=title;
     }

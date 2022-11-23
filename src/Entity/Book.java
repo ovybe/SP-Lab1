@@ -1,14 +1,12 @@
 package Entity;
 
-import Entity.Author;
 import Interface.Element;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Book extends Section{
     // responsible for Entity.Chapter
-    private ArrayList<Author> authors;
+    private final ArrayList<Author> authors;
     public Book(String title){
         super(title);
         this.authors= new ArrayList<>();
@@ -27,7 +25,7 @@ public class Book extends Section{
             author.print();
         }
         System.out.println();
-        super.print(false);
+        super.print();
 
 
     }

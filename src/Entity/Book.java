@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Book extends Section{
     // responsible for Entity.Chapter
-    private final ArrayList<Author> authors;
+    public final ArrayList<Author> authors;
     public Book(String title){
         super(title);
         this.authors= new ArrayList<>();
@@ -17,16 +17,19 @@ public class Book extends Section{
     public void addContent(Element el){
         super.add(el);
     }
-    public void print(){
-        System.out.println("Book: "+this.title);
-        System.out.println();
-        System.out.println("Authors:");
-        for(Author author : this.authors){
-            author.print();
-        }
-        System.out.println();
-        super.print();
-
-
+    public void accept(Visitor visitor){
+        visitor.visitBook(this);
     }
+//    public void print(){
+//        System.out.println("Book: "+this.title);
+//        System.out.println();
+//        System.out.println("Authors:");
+//        for(Author author : this.authors){
+//            author.print();
+//        }
+//        System.out.println();
+//        super.print();
+//
+//
+//    }
 }

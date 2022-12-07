@@ -18,10 +18,10 @@ public class ImageProxy implements Element {
         return realImage;
     }
 
-    @Override
-    public void print() {
-        loadimage().print();
-    }
+//    @Override
+//    public void print() {
+//        loadimage().print();
+//    }
 
     @Override
     public void add(Element el) {
@@ -31,6 +31,11 @@ public class ImageProxy implements Element {
     @Override
     public void remove(Element el) {
 
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
     }
 
     @Override

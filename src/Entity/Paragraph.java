@@ -3,8 +3,8 @@ package Entity;
 import Interface.Element;
 
 public class Paragraph implements Element {
-    private final String text;
-    private AlignStrategy textAlignment;
+    public final String text;
+    public AlignStrategy textAlignment;
     public Paragraph(String text){
         this.text=text;
     }
@@ -14,13 +14,13 @@ public class Paragraph implements Element {
     public void setAlignStrategy(AlignStrategy alignment){
         this.textAlignment=alignment;
     }
-    public void print(){
-        if(textAlignment==null){
-            System.out.println("Paragraph: "+this.text);
-        }
-        else
-            System.out.println("Paragraph: "+textAlignment.render(this));
-    }
+//    public void print(){
+//        if(textAlignment==null){
+//            System.out.println("Paragraph: "+this.text);
+//        }
+//        else
+//            System.out.println("Paragraph: "+textAlignment.render(this));
+//    }
 
     public void add(Element el) {
 
@@ -28,6 +28,10 @@ public class Paragraph implements Element {
 
     public void remove(Element el) {
 
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
     }
 
     public Element get(int index) {

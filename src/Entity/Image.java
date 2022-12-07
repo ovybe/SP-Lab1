@@ -5,7 +5,7 @@ import Interface.Element;
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
-    private final String url;
+    public final String url;
     public Image(String url){
         this.url=url;
         try {
@@ -14,9 +14,9 @@ public class Image implements Element {
             e.printStackTrace();
         }
     }
-    public void print(){
-        System.out.println(this.url);
-    }
+//    public void print(){
+//        System.out.println(this.url);
+//    }
 
     public void add(Element el) {
 
@@ -24,6 +24,10 @@ public class Image implements Element {
 
     public void remove(Element el) {
 
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 
     public Element get(int index) {

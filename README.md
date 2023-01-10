@@ -16,3 +16,6 @@ https://github.com/ovybe/SP-Lab1/tree/59b8949f462ae229ec86953092dceb56c8f31ba7
 - Section::print(boolean) what is the purpose!?
 
 Nota 10
+
+# Nota finala propusa:
+10
